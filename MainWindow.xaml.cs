@@ -20,5 +20,12 @@ namespace CalucatorGit
         {
             InitializeComponent();
         }
+        string Op = "";
+        string Mewmory_out;
+
+        private void ButtonClick(object sender, RoutedEventArgs e)
+        {
+            Output.Text += ((Button)(sender)).Content.ToString();
+        }
     }
 }
