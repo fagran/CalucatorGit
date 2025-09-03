@@ -25,7 +25,14 @@ namespace CalucatorGit
 
         private void ButtonClick(object sender, RoutedEventArgs e)
         {
-            Output.Text += ((Button)(sender)).Content.ToString();
+            if(Output.Focus() == true)
+            {
+                Output.Text += ((Button)(sender)).Content.ToString();
+            }
+            else
+            {
+                Output1.Text += ((Button)(sender)).Content.ToString();
+            }
         }
     }
 }
