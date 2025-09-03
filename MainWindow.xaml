@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalucatorGit"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="650" Width="450"
+    Background="Gray">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Name="Output" Margin="20" Height="140" Background="Ivory" TextAlignment="Right" FontSize="40" />
+        <UniformGrid Rows="4" Grid.Row="2" Margin="20 20 20 100">
+            <Button Content="7" FontSize="40" Click="ButtonClick"/>
+            <Button Content="8" FontSize="40" Click="ButtonClick"/>
+            <Button Content="9" FontSize="40" Click="ButtonClick"/>
+            <Button Content="/" FontSize="40" Click="ButtonClickTask"/>
+            <Button Content="4" FontSize="40" Click="ButtonClick"/>
+            <Button Content="5" FontSize="40" Click="ButtonClick"/>
+            <Button Content="6" FontSize="40" Click="ButtonClick"/>
+            <Button Content="*" FontSize="40" Click="ButtonClickTask"/>
+            <Button Content="1" FontSize="40" Click="ButtonClick"/>
+            <Button Content="2" FontSize="40" Click="ButtonClick"/>
+            <Button Content="3" FontSize="40" Click="ButtonClick"/>
+            <Button Content="-" FontSize="40" Click="ButtonClickTask"/>
+            <Button Content="0" FontSize="40" Click="ButtonClick"/>
+            <Button Content="C" FontSize="40" Click="bC"/>
+            <Button Content="=" FontSize="40" Click="bEq"/>
+            <Button Content="+" FontSize="40" Click="ButtonClickTask"/>
+        </UniformGrid>
     </Grid>
 </Window>
