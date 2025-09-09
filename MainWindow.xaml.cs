@@ -63,6 +63,16 @@ namespace CalucatorGit
             }
         }
 
+        private void Button_manus(object sender, RoutedEventArgs e)
+        {
+            if (Output.Text != "" && Output1.Text != "")
+            {
+                Answer.Content = Convert.ToInt32(Output.Text) - Convert.ToInt32(Output1.Text);
+                Output.Text = "";
+                Output1.Text = "";
+            }
+        }
+
         private void Button_Click_Equal(object sender, RoutedEventArgs e)
         {
             if (((Button)(sender)).Content == "=")
