@@ -43,11 +43,11 @@
             <Button Content="1" FontSize="40" Click="Button_cifri"/>
             <Button Content="2" FontSize="40" Click="Button_cifri"/>
             <Button Content="3" FontSize="40" Click="Button_cifri"/>
-            <Button Content="-" FontSize="40"/>
+            <Button Content="-" FontSize="40" Click="Button_manus"/>
             <Button Content="C" FontSize="40" Click="Button_Click_Clear"/>
             <Button Content="0" FontSize="40" Click="Button_cifri"/>
             <Button Content="=" FontSize="40" Click="Button_Click_Equal"/>
-            <Button Content="+" FontSize="40"/>
+            <Button Content="+" FontSize="40" Click="Button_Sloj"/>
         </UniformGrid>
         <Label Name="Answer" Content="" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2" Width="425" HorizontalContentAlignment="Center" FontSize="30" Background="Ivory" FontWeight="DemiBold" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
