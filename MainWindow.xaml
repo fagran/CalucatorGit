@@ -34,7 +34,7 @@
             <Button Content="2" FontSize="40"/>
             <Button Content="3" FontSize="40"/>
             <Button Content="-" FontSize="40"/>
-            <Button Content="C" FontSize="40"/>
+            <Button Content="C" FontSize="40" Click="Button_Click_Clear"/>
             <Button Content="0" FontSize="40"/>
             <Button Content="=" FontSize="40"/>
             <Button Content="+" FontSize="40"/>

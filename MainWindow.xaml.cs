@@ -22,6 +22,12 @@ namespace CalucatorGit
         }
         string Op = "";
         string Mewmory_out;
-        
+
+        private void Button_Click_Clear(object sender, RoutedEventArgs e)
+        {
+            Output.Text = "";
+            Output.Text = "";
+            Answer.Content = "";
+        }
     }
 }
