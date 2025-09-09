@@ -22,6 +22,13 @@ namespace CalucatorGit
         }
         string Op = "";
         string Mewmory_out;
-        
+
+        private void Button_Click_Division(object sender, RoutedEventArgs e)
+        {
+            if (Convert.ToInt32(Output1.Text) != 0)
+            {
+                Answer.Content = Convert.ToInt32(Output.Text) / Convert.ToInt32(Output1.Text);
+            }
+        }
     }
 }

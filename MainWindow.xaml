@@ -25,7 +25,7 @@
             <Button Content="7" FontSize="40"/>
             <Button Content="8" FontSize="40"/>
             <Button Content="9" FontSize="40"/>
-            <Button Content="/" FontSize="40"/>
+            <Button Content="/" FontSize="40" Click="Button_Click_Division"/>
             <Button Content="4" FontSize="40"/>
             <Button Content="5" FontSize="40"/>
             <Button Content="6" FontSize="40"/>
