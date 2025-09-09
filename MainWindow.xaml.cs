@@ -51,5 +51,12 @@ namespace CalucatorGit
                 ((Button)(sender)).Content = "=";
             }
         }
+
+        private void Button_Click_Clear(object sender, RoutedEventArgs e)
+        {
+            Output.Text = "";
+            Output.Text = "";
+            Answer.Content = "";
+        }
     }
 }
