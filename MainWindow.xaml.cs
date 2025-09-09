@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Security.AccessControl;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -20,12 +21,12 @@ namespace CalucatorGit
         {
             InitializeComponent();
         }
-        string Op = "";
+
         bool Mewmory_out = false;
 
         private void Button_Click_Multiple(object sender, RoutedEventArgs e)
         {
-            if(Output.Text != null && Output1.Text != null)
+            if(Output.Text != "" && Output1.Text != "")
             {
                 Answer.Content = Convert.ToInt32(Output.Text) * Convert.ToInt32(Output1.Text);
                 Output.Text = "";
@@ -36,14 +37,19 @@ namespace CalucatorGit
 
         private void Button_Click_Division(object sender, RoutedEventArgs e)
         {
-            if (Output.Text != null && Output1.Text != null)
+            if (Output.Text != "" && Output1.Text != "")
             {
-                if (Convert.ToInt32(Output1.Text) != 0)
+                if (Convert.ToInt32(Output1.Text) == 0)
+                {
+                    Answer.Content = "Орефки макадамья";
+                }
+                else
                 {
                     Answer.Content = Convert.ToInt32(Output.Text) / Convert.ToInt32(Output1.Text);
                     Output.Text = "";
                     Output1.Text = "";
                 }
+
             }
         }
 
@@ -64,7 +70,7 @@ namespace CalucatorGit
         private void Button_Click_Clear(object sender, RoutedEventArgs e)
         {
             Output.Text = "";
-            Output.Text = "";
+            Output1.Text = "";
             Answer.Content = "";
 
         }

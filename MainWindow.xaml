@@ -20,7 +20,16 @@
         </Grid.ColumnDefinitions>
 
         <TextBox Name="Output"  Height="70" Width="200" Background="Ivory" TextAlignment="Right" FontSize="40" Grid.Column="0"  Grid.Row="0" />
-        <TextBox Name="Output1"  Height="70"  Width="200" Background="Ivory" TextAlignment="Right" FontSize="40" Grid.Column="1"  Grid.Row="0" />
+        <TextBox Name="Output1"  Height="70"  Width="200" Background="Ivory" TextAlignment="Right" FontSize="40" Grid.Column="1"  Grid.Row="0" RenderTransformOrigin="0.5,0.5" >
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-7.378"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
         <UniformGrid Rows="4" Grid.Row="2" Grid.ColumnSpan="2" Margin="20 20 20 100">
 
             <Button Content="7" FontSize="40" Click="Button_cifri"/>
@@ -40,6 +49,15 @@
             <Button Content="=" FontSize="40" Click="Button_Click_Equal"/>
             <Button Content="+" FontSize="40"/>
         </UniformGrid>
-        <Label Name="Answer" d:Content="123" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2" Width="146" HorizontalContentAlignment="Center" FontSize="30" Background="Ivory" FontWeight="DemiBold"/>
+        <Label Name="Answer" Content="" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2" Width="425" HorizontalContentAlignment="Center" FontSize="30" Background="Ivory" FontWeight="DemiBold" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="4.162"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
     </Grid>
 </Window>
