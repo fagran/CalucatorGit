@@ -60,5 +60,17 @@ namespace CalucatorGit
             Answer.Content = "";
 
         }
+
+        private void Button_cifri(object sender, RoutedEventArgs e)
+        {
+            if (Output.Focus() == true)
+            {
+                Output.Text = Convert.ToString(((Button)(sender)).Content);
+            }
+            else if (Output1.Focus() == true)
+            {
+                Output1.Text = Convert.ToString(((Button)(sender)).Content);
+            }
+        }
     }
 }
