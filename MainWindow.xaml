@@ -19,24 +19,24 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Name="Output"  Height="70" Width="200" Background="Ivory" TextAlignment="Right" FontSize="40" Grid.Column="0"  Grid.Row="0"/>
-        <TextBlock Name="Output1"  Height="70"  Width="200" Background="Ivory" TextAlignment="Right" FontSize="40" Grid.Column="1"  Grid.Row="0"/>
+        <TextBox Name="Output"  Height="70" Width="200" Background="Ivory" TextAlignment="Right" FontSize="40" Grid.Column="0"  Grid.Row="0" />
+        <TextBox Name="Output1"  Height="70"  Width="200" Background="Ivory" TextAlignment="Right" FontSize="40" Grid.Column="1"  Grid.Row="0" />
         <UniformGrid Rows="4" Grid.Row="2" Grid.ColumnSpan="2" Margin="20 20 20 100">
 
-            <Button Content="7" FontSize="40"/>
-            <Button Content="8" FontSize="40"/>
-            <Button Content="9" FontSize="40"/>
+            <Button Content="7" FontSize="40" Click="Button_cifri"/>
+            <Button Content="8" FontSize="40" Click="Button_cifri"/>
+            <Button Content="9" FontSize="40" Click="Button_cifri"/>
             <Button Content="/" FontSize="40" Click="Button_Click_Division"/>
-            <Button Content="4" FontSize="40"/>
-            <Button Content="5" FontSize="40"/>
-            <Button Content="6" FontSize="40"/>
+            <Button Content="4" FontSize="40" Click="Button_cifri"/>
+            <Button Content="5" FontSize="40" Click="Button_cifri"/>
+            <Button Content="6" FontSize="40" Click="Button_cifri"/>
             <Button Content="*" FontSize="40" Click="Button_Click_Multiple"/>
-            <Button Content="1" FontSize="40"/>
-            <Button Content="2" FontSize="40"/>
-            <Button Content="3" FontSize="40"/>
+            <Button Content="1" FontSize="40" Click="Button_cifri"/>
+            <Button Content="2" FontSize="40" Click="Button_cifri"/>
+            <Button Content="3" FontSize="40" Click="Button_cifri"/>
             <Button Content="-" FontSize="40"/>
             <Button Content="C" FontSize="40" Click="Button_Click_Clear"/>
-            <Button Content="0" FontSize="40"/>
+            <Button Content="0" FontSize="40" Click="Button_cifri"/>
             <Button Content="=" FontSize="40" Click="Button_Click_Equal"/>
             <Button Content="+" FontSize="40"/>
         </UniformGrid>

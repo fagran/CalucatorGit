@@ -21,23 +21,29 @@ namespace CalucatorGit
             InitializeComponent();
         }
         string Op = "";
-        string Mewmory_out;
+        bool Mewmory_out = false;
 
         private void Button_Click_Multiple(object sender, RoutedEventArgs e)
         {
-
-            Answer.Content = Convert.ToInt32(Output.Text) * Convert.ToInt32(Output1.Text);
-            Output.Text = "";
-            Output1.Text = "";
+            if(Output.Text != null && Output1.Text != null)
+            {
+                Answer.Content = Convert.ToInt32(Output.Text) * Convert.ToInt32(Output1.Text);
+                Output.Text = "";
+                Output1.Text = "";
+            }
+            
         }
 
         private void Button_Click_Division(object sender, RoutedEventArgs e)
         {
-            if (Convert.ToInt32(Output1.Text) != 0)
+            if (Output.Text != null && Output1.Text != null)
             {
-                Answer.Content = Convert.ToInt32(Output.Text) / Convert.ToInt32(Output1.Text);
-                Output.Text = "";
-                Output1.Text = "";
+                if (Convert.ToInt32(Output1.Text) != 0)
+                {
+                    Answer.Content = Convert.ToInt32(Output.Text) / Convert.ToInt32(Output1.Text);
+                    Output.Text = "";
+                    Output1.Text = "";
+                }
             }
         }
 
@@ -45,10 +51,12 @@ namespace CalucatorGit
         {
             if (((Button)(sender)).Content == "=")
             {
+                Mewmory_out = true;
                 ((Button)(sender)).Content = ":D";
             }
             else
             {
+                Mewmory_out = false;
                 ((Button)(sender)).Content = "=";
             }
         }
@@ -63,13 +71,15 @@ namespace CalucatorGit
 
         private void Button_cifri(object sender, RoutedEventArgs e)
         {
-            if (Output.Focus() == true)
+            if (Mewmory_out == false)
             {
-                Output.Text = Convert.ToString(((Button)(sender)).Content);
+               
+                Output.Text += Convert.ToString(((Button)(sender)).Content);
             }
-            else if (Output1.Focus() == true)
+            else if (Mewmory_out == true)
             {
-                Output1.Text = Convert.ToString(((Button)(sender)).Content);
+                
+                Output1.Text += Convert.ToString(((Button)(sender)).Content);
             }
         }
     }
