@@ -23,16 +23,42 @@ namespace CalucatorGit
         string Op = "";
         string Mewmory_out;
 
-        private void ButtonClick(object sender, RoutedEventArgs e)
+        private void Button_Click_Multiple(object sender, RoutedEventArgs e)
         {
-            if(Output.Focus() == true)
+
+            Answer.Content = Convert.ToInt32(Output.Text) * Convert.ToInt32(Output1.Text);
+            Output.Text = "";
+            Output1.Text = "";
+        }
+
+        private void Button_Click_Division(object sender, RoutedEventArgs e)
+        {
+            if (Convert.ToInt32(Output1.Text) != 0)
             {
-                Output.Text += ((Button)(sender)).Content.ToString();
+                Answer.Content = Convert.ToInt32(Output.Text) / Convert.ToInt32(Output1.Text);
+                Output.Text = "";
+                Output1.Text = "";
+            }
+        }
+
+        private void Button_Click_Equal(object sender, RoutedEventArgs e)
+        {
+            if (((Button)(sender)).Content == "=")
+            {
+                ((Button)(sender)).Content = ":D";
             }
             else
             {
-                Output1.Text += ((Button)(sender)).Content.ToString();
+                ((Button)(sender)).Content = "=";
             }
+        }
+
+        private void Button_Click_Clear(object sender, RoutedEventArgs e)
+        {
+            Output.Text = "";
+            Output.Text = "";
+            Answer.Content = "";
+
         }
     }
 }
