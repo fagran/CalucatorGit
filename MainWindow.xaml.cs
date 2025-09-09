@@ -25,6 +25,7 @@ namespace CalucatorGit
 
         private void Button_Click_Multiple(object sender, RoutedEventArgs e)
         {
+
             Answer.Content = Convert.ToInt32(Output.Text) * Convert.ToInt32(Output1.Text);
             Output.Text = "";
             Output1.Text = "";
@@ -57,6 +58,7 @@ namespace CalucatorGit
             Output.Text = "";
             Output.Text = "";
             Answer.Content = "";
+
         }
     }
 }
