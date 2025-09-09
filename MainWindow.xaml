@@ -25,20 +25,20 @@
             <Button Content="7" FontSize="40"/>
             <Button Content="8" FontSize="40"/>
             <Button Content="9" FontSize="40"/>
-            <Button Content="/" FontSize="40" Click="ButtonClickDiv"/>
+            <Button Content="/" FontSize="40"/>
             <Button Content="4" FontSize="40"/>
             <Button Content="5" FontSize="40"/>
             <Button Content="6" FontSize="40"/>
-            <Button Content="*" FontSize="40" Click="ButtonClickMult"/>
+            <Button Content="*" FontSize="40"/>
             <Button Content="1" FontSize="40"/>
             <Button Content="2" FontSize="40"/>
             <Button Content="3" FontSize="40"/>
             <Button Content="-" FontSize="40"/>
+            <Button Content="C" FontSize="40"/>
             <Button Content="0" FontSize="40"/>
-            <Button Content="C" FontSize="40" Click="bC"/>
-            <Button Content="=" FontSize="40" Click="bEq"/>
+            <Button Content="=" FontSize="40"/>
             <Button Content="+" FontSize="40"/>
         </UniformGrid>
-        <Label d:Content="123" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2" Width="146" HorizontalContentAlignment="Center" FontSize="30" Background="Ivory" FontWeight="DemiBold"/>
+        <Label Name="Answer" d:Content="123" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2" Width="146" HorizontalContentAlignment="Center" FontSize="30" Background="Ivory" FontWeight="DemiBold"/>
     </Grid>
 </Window>
