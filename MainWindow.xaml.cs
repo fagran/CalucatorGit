@@ -39,5 +39,17 @@ namespace CalucatorGit
                 Output1.Text = "";
             }
         }
+
+        private void Button_Click_Equal(object sender, RoutedEventArgs e)
+        {
+            if (((Button)(sender)).Content == "=")
+            {
+                ((Button)(sender)).Content = ":D";
+            }
+            else
+            {
+                ((Button)(sender)).Content = "=";
+            }
+        }
     }
 }
